@@ -32,12 +32,37 @@ namespace ListNumsActions
 
 
                     case "remove":
+                        Console.Write("Index: ");
+                        int index = int.Parse(Console.ReadLine());
+                        nums.RemoveAt(index);
                         break;
 
                     case "add":
+                        Console.Write("Num1: ");
+                        int addNum1 = int.Parse(Console.ReadLine());
+                        Console.Write("Num2: ");
+                        int addNum2 = int.Parse(Console.ReadLine());
+                        nums.Add(addNum1 + addNum2);
                         break;
 
                     case "large":
+                        if (nums.Count > 0)
+                        {
+                            int largest = nums[0];
+
+                            for (int i = 1; i < nums.Count; i++)
+                            {
+                                if (nums[i] > largest)
+                                {
+                                    largest = nums[i];
+                                }
+                            }
+                            Console.WriteLine("Largest number is: " + largest);
+                        }
+                        else
+                        {
+                            Console.WriteLine("List is empty.");
+                        }
                         break;
                     //devB
 
