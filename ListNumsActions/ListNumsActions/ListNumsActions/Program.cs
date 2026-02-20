@@ -20,12 +20,30 @@ namespace ListNumsActions
                 switch (command)
                 {
                     case "ins":
+                        Console.Write("Enter num: ");
+                        int insNum = int.Parse(Console.ReadLine());
+                        Console.Write("Enter index: ");
+                        int insIndex = int.Parse(Console.ReadLine());
+                        nums.Insert(insNum, insIndex);
                         break;
 
                     case "del":
+                        Console.Write("Element: ");
+                        int element = int.Parse(Console.ReadLine());
+                        nums.Remove(element);
                         break;
 
                     case "contains":
+                        Console.Write("Element: ");
+                        int contains = int.Parse(Console.ReadLine());
+                        if (nums.Contains(contains))
+                        {
+                            Console.WriteLine("Yes");
+                        }
+                        else
+                        {
+                            Console.WriteLine("No");
+                        }
                         break;
                     //devA
 
