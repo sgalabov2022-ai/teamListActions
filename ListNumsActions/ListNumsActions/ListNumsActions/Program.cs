@@ -87,12 +87,27 @@ namespace ListNumsActions
 
 
                     case "countl":
+                        Console.Write("Number: ");
+                        int number = int.Parse(Console.ReadLine());
+                        int count = 0;
+                        foreach (int num in nums)
+                        {
+                            if (num > number)
+                            {
+                                count++;
+                            }
+                        }
+                        Console.WriteLine(count);
                         break;
 
                     case "cut":
+                        Console.Write("Index: ");
+                        int index = int.Parse(Console.ReadLine());
+                        nums.RemoveAt(index);
                         break;
 
                     case "peint":
+                        Console.WriteLine(string.Join(" ", nums));
                         break;
                     //devC
 
